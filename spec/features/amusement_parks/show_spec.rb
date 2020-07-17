@@ -17,7 +17,6 @@ RSpec.describe 'As a visitor', type: :feature do
     it "allows a user to see the names of all the rides, in alphabetical order" do
       visit "/parks/#{@park_1.id}"
 
-      save_and_open_page
       expect(page).to have_content(@ride_1.name)
       expect(page).to have_content(@ride_2.name)
     end
